@@ -1,0 +1,52 @@
+@import 'partials/colors';
+@import 'partials/header';
+@import 'partials/layout';
+@import 'partials/services';
+@import 'partials/about';
+@import 'partials/diferencial';
+@import 'partials/footer';
+@import 'partials/popupwpp';
+@import 'partials/faq';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Sora', sans-serif;
+    width: 100%;
+    height: 400vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white-light;
+    overflow-x: hidden;
+}
+
+button{
+    font-family: 'Sora', sans-serif;
+    cursor: pointer;
+
+}
+
+svg{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+    cursor:pointer;
+    text-decoration: none;
+}

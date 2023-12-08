@@ -1,0 +1,81 @@
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+        transition: transform .4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: hidden;
+    position: absolute;
+    width: 165px;
+    top: -px;
+    left: -180px;
+    padding: 6px;
+    border-radius: 10px 10px 0 10px;
+    text-align: center;
+    background-color: $white-normal;
+    color:$primary-dark;
+    border:3px solid $secondary-light;
+    opacity: 0;
+    transition: opacity .4s;
+    animation:nudge 3s linear infinite;
+}
+
+
+.btn-whatsapp .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+
+}
+
+@media screen and (max-width:768px){
+    .btn-whatsapp{
+        img{
+            max-width: 64px;
+        }
+    }
+}
+
+@keyframes grow{
+    0% {
+        width: auto;
+        max-width: 70px;
+        max-height: 74.375px;
+        transition: max-width 1s ease-in-out,color .2s ease-in-out;
+        color: transparent;
+    }
+    35% {
+        transition: color 1.5s ease-in-out;
+        text-indent: unset;
+        max-width: 120px;
+        color: #000;
+    }
+}
+@keyframes nudge{
+    80% {
+        transform: translate(0,0) rotate(0deg);
+    }
+    85% {
+        transform: translate(-2px,2px) rotate(-2deg);
+    }
+    90% {
+        transform: translate(0,0) rotate(0deg);
+    }
+    95% {
+        transform: translate(2px,2px) rotate(2deg);
+    }
+    100% {
+        transform: translate(0,0) rotate(0deg);
+    }
+}
