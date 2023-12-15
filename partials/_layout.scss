@@ -30,7 +30,6 @@
 .hero{
     color: $white-normal;
     min-height: 60vh;
-    max-height: 66vh;
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -39,17 +38,21 @@
     gap:25px;
     h1{
         text-align: center;
-        line-height: 100%;
-        max-width: 600px;
         font-size: 50px;
         color: $secondary-normal;
+        font-family:'Raleway';
     }
     h2{
         text-align: center;
+        
     }
     p{
         text-align: center;
         font-size: 18px;
+        font-family:'PT Serif', serif
+    }
+    div{
+        flex:1;
     }
     .left{
         flex: 1;
@@ -98,13 +101,13 @@
             width:100%;
         }
         p{
-            font-size: 14px;
+            font-size: 16px;
         }
     }
 }
 @media screen and (max-width: 480px){
     .hero h1{
-            font-size: 25px;
+            font-size: 35px;
     }
     
 }

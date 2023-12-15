@@ -1,12 +1,31 @@
 .about{
     border-radius: 5px;
     display: flex;
+    padding: 50px;
+    height:100%;
+    align-items:center;
+    h2{
+        font-family:'Raleway';
+    }
     p{
         font-size: 16px;
         line-height: 28px;
+        font-family:'PT Serif', serif;
+        font-weight:500;
     }
     div{
         flex:1;
+    }
+    .photo-2{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 600px;
+        img{
+            border-radius: 600px;
+        }
     }
     
 }
@@ -24,7 +43,19 @@
 }
 
 @media screen and (max-width:790px){
-    .about .photo-1{
-        display:none;
+    .about{
+        flex-direction:column;
+        .photo-2{
+            align-items:baseline;
+            img{
+                border-radius:0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:520px){
+    .about-content{
+        padding: 60px 0px;
     }
 }

@@ -30,7 +30,7 @@ header{
     }
 }
 .header-button{
-    display: none;
+    visibility:hidden;
 }
 .header-button, .header-button-visible{
     border: 1px solid $white-normal;
@@ -67,7 +67,7 @@ header{
     .header-logo {
         margin:0;
         img{
-            width: 160px;
+            width: 300px;
             margin-top: 46px;
         }
     }
@@ -85,3 +85,4 @@ header{
         transform:translateY(-8px) scale(1.1);
     }
 }
+// assessoria.amorim.adv

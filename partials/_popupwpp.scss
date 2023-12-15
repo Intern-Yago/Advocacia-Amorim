@@ -16,10 +16,9 @@
 }
 
 .btn-whatsapp .tooltip-text{
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
     width: 165px;
-    top: -px;
     left: -180px;
     padding: 6px;
     border-radius: 10px 10px 0 10px;
@@ -27,41 +26,13 @@
     background-color: $white-normal;
     color:$primary-dark;
     border:3px solid $secondary-light;
-    opacity: 0;
-    transition: opacity .4s;
+    opacity: 1;
     animation:nudge 3s linear infinite;
 }
 
 
-.btn-whatsapp .tooltip-text{
-    visibility: visible;
-    opacity: 1;
 
-}
 
-@media screen and (max-width:768px){
-    .btn-whatsapp{
-        img{
-            max-width: 64px;
-        }
-    }
-}
-
-@keyframes grow{
-    0% {
-        width: auto;
-        max-width: 70px;
-        max-height: 74.375px;
-        transition: max-width 1s ease-in-out,color .2s ease-in-out;
-        color: transparent;
-    }
-    35% {
-        transition: color 1.5s ease-in-out;
-        text-indent: unset;
-        max-width: 120px;
-        color: #000;
-    }
-}
 @keyframes nudge{
     80% {
         transform: translate(0,0) rotate(0deg);

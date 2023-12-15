@@ -18,12 +18,12 @@
 
 html{
     scroll-behavior: smooth;
+    overflow-x:hidden;
 }
 
 body{
     font-family: 'Sora', sans-serif;
-    width: 100%;
-    height: 400vh;
+    max-width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;

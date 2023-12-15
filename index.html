@@ -3,19 +3,22 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="facebook-domain-verification" content="iu7rzle8hb6e8nbyi6iv7lm879bxw1" />
 
     <link rel="manifest" href="manifest.json">
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./styles.css">
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <meta name="description" content="A Amorim Advocacia está aqui para te ajudar com diversos problemas na área de plano de saúde. Temos especialidade em liberação de médicamentos, home care e o outros problemas jurídicos como ...">
     <meta name="keywords" content="home care para idosos">
@@ -28,22 +31,27 @@
     <meta name="keywords" content="Direito do consumidor">
     <meta name="keywords" content="Advocacia Especializada em Plano de Saúde">
     
-
+    <script>
+        (function(w,d,s,l,i){
+            w[l]=w[l]||[];
+            w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+            j.async=true;
+            j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+            f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KS47SHDX');
+    </script>
+        
     <title>Amorim Advocacia</title>
 </head>
 <body>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KS47SHDX"height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
     <div class="bg-home" id="principal">
-        <a 
-        href="https://api.whatssapp.com/send?phone=551100000000&text=Quero%20fazer%20um%20agendamento%20hoje!"
-        class="btn-whatsapp"
-        target="_blank"
-        data-aos="fade-left"
-    >
-        <img src="./assets/whatssapp.svg" alt="Botão whatssapp">
-        <span class="tooltip-text">Sua saúde não deve mais esperar. Agende agora</span>
-    </a>
         <header>
-            <nav class="header-content container">
+            <nav class="header-content container" data-aos="fade-down">
                 <div class="header-icons">
                     <a href="#">
                         <i class="fa-brands fa-instagram fa-2x"></i>
@@ -57,27 +65,27 @@
                 </div>
                 <div class="header-logo">
 
-                    <img loading="lazy" src="./assets/logo_big.svg" alt="logo da advocacia">
+                    <img src="./assets/logo_big.svg" alt="logo da advocacia">
                 </div>
                 <div class="header-button-container">
                     <a href="#" class="header-button">
-                        Entrar em contato
+                        Fale agora com um advogado!
                     </a>
                 </div>
             </nav>
             <main class="hero container">
-                <div class="left">
-                    <h1>Teve problemas com plano de saúde?</h1>
-                    <h2>Sua saúde é a nossa prioridade legal, estamos aqui para ajudar</h2>
-                    <p>Garanta seus direitos na saúde! Advocaia especializada em planos de saúde, dedicado a assegurar coberturas justas e combater negativas indevidas.</p>
+                <div class="left" data-aos="fade-right">
+                    <h1>Teve problema com o seu plano de saúde?</h1>
+                    <h2>Quando o assunto é saúde, cada minuto é decisivo para sua vida!</h2>
+                    <!-- <p>Garanta seus direitos na saúde! Advocacia especializada em planos de saúde, dedicado a assegurar coberturas justas e combater negativas indevidas.</p> -->
                     <div class="header-button-container-visible">
                         <a href="#" class="header-button-visible">
-                            Entrar em contato
+                            Fale agora com um advogado
                         </a>
                     </div>
                 </div>
-                <div class="right">
-                    <img src="./assets/photho1.png" alt="">
+                <div class="right" data-aos="fade-left">
+                    <img src="./assets/photho1.png" alt="Advogado Daniell Pinho Amorim">
                 </div>
             </main>
         </header>
@@ -86,56 +94,58 @@
     <section class="services" id="services">
         <h2>Como podemos ajudar?</h2>
         <div class="services-content">
-            <div class="service">
-                <img src="./assets/erro-medico.jpeg" alt="">
+            <div class="service" data-aos="flip-left">
+                <img src="./assets/liminar.jpeg" alt="">
                 <div class="service-info">
-                    <h3>Erro médico</h3>
-                    <p>Proteja seus direitos e obtenha a justiça de ter um médico competente ao seu lado! Nosso experiente time em erro médico está pronto para lutar pela sua causa.</p>
+                    <h3>Obtenção de Liminar</h3>
+                    <p>A sua sáude não pode esperar. Conte com o nosso time de especialistas para uma maior agilidade no protocolo e obtenção de uma liminar favorável.</p>
 
                 </div>
             </div>
-            <div class="service">
+            <div class="service" data-aos="flip-left" >
+                <img src="./assets/pregnant.jpeg" alt="">
+                <div class="service-info">
+                    <h3>Trombofilia</h3>
+                    <p>Oferecemos orientação especializada na obtenção do seu medicamento para trombofilia.</p>
+
+                </div>
+            </div>
+            <div class="service" data-aos="flip-left">
                 <img src="./assets/closeup-support-hands.jpg" alt="">
                 <div class="service-info">
                     <h3>Home Care</h3>
-                    <p>Seu direito ao home care foi negado? Conte com um advogado especializado para garantir o cuidado que merece.</p>
+                    <p>Seu home care foi negado? Nosso time de especialistas está pronto para combater essa abusividade.</p>
 
                 </div>
             </div>
-            <div class="service">
+            <div class="service" data-aos="flip-left">
                 <img src="./assets/drug-store.jpg" alt="">
                 <div class="service-info">
-                    <h3>Negativa de medicamento</h3>
-                    <p>Estamos prontos para lutar por você contra a negação de medicamentos pelo plano de saúde.</p>
+                    <h3>Medicamento de alto custo</h3>
+                    <p>Estamos prontos para lutar por você contra a negativa no fornecimento de medicamento de alto custo pelo plano de saúde.</p>
 
                 </div>
             </div>
-            <div class="service">
+            <div class="service" data-aos="flip-left">
                 <img src="./assets/stomach.jpeg" alt="">
                 <div class="service-info">
                     <h3>Cirurgia bariátrica</h3>
-                    <p>Supere a negação da cirurgia bariátrica pelo plano de saúde com a expertise de um advogado especializado</p>
+                    <p>É abusiva a negativa pelo plano de saúde de cobertura da cirurgia bariátrica bem como das reparadoras.</p>
 
                 </div>
             </div>
-            <div class="service">
-                <img src="./assets/negativa.jpeg" alt="">
+            <div class="service" data-aos="flip-left">
+                <img src="./assets/autismo.webp" alt="">
                 <div class="service-info">
-                    <h3>Negativa abusiva</h3>
-                    <p>Sua cobertura foi negada de forma abusiva? Iremos garantir direitos e obter a assistência médica que você merece.</p>
+                    <h3>Terapia para autistas</h3>
+                    <p>Negar tratamento para autista é uma injustiça que precisa ser superada para assegurar o acesso aos cuidados e terapias essências.</p>
 
                 </div>
             </div>
-            
-            <div class="service">
-                <img src="./assets/money.jpg" alt="">
-                <div class="service-info">
-                    <h3>Reembolso de procedimentos</h3>
-                    <p>Enfrente a negação de reembolso do seu plano de saúde com confiança e exija seus direitos com nossa equipe. Estamos aqui para garantir que você sejacompensado!</p>
-                </div>
-            </div>
-            <div class="service">
-                <img src="./assets/transgender-sign.jpg" alt="">
+            <div class="service" 
+                    data-aos="flip-left"
+            >
+                <img src="./assets/trans_sign.jpeg" alt="">
                 <div class="service-info">
                     <h3>Redesignação de gênero</h3>
                     <p>Seu direito à autodeterminação de gênero é inegociável. Conte com nosso apoio jurídico especializado para enfrentar e reverter a negação de Redesignação de Gênero.</p>
@@ -145,11 +155,8 @@
     </section>
 
     <section class="about" id="sobre">
-        <div style="
-            width: 500px;
-            height: 100px;
-        " class="photo-1">
-            image
+        <div class="photo-2" data-aos="fade-left">
+            <img src="./assets/photo2.png" alt="">
         </div>
         <div class="about-content">
             <h2>Sobre Nós</h2>
@@ -173,7 +180,7 @@
 
     <section class="diferencial" id="diferencial">
         <div class="diferencial-content">
-            <h2>Amorim Advocacia: Especialidade em resolver seu problema</h2>
+            <h2>Amorim Advocacia: Especialidade em resolver seu problema.</h2>
             <span class="text-container">
                 <div class="text">
                     <span>
@@ -200,7 +207,7 @@
                         </div>
                         <div class="text-content">
                             <p>
-                                Prometemos proporcionar o máximo de segurança para nossos clientes mostrando nossos esforços e realizando tudo possível para te ajudar
+                                Prometemos proporcionar o máximo de segurança para nossos clientes mostrando nossos esforços e realizando tudo possível para te ajudar.
                             </p>
                         </div>
                         
@@ -218,7 +225,7 @@
                             
                         <div class="text-content">
                             <p>
-                                Mostraremos soluções de formas mais claras possíveis para que assim você possa entender seus direitos
+                                Mostraremos soluções de formas mais claras possíveis para que assim você possa entender seus direitos.
                             </p>
                         </div>
                         
@@ -232,7 +239,7 @@
                         </div>
                         <div class="text-content">
                             <p>
-                                Todo nosso tempo no mercado e a dedicação de nossos profissionais faz com que tenhamos as melhores formas de resolver seus problemas
+                                Todo nosso tempo no mercado e a dedicação de nossos profissionais faz com que tenhamos as melhores formas de resolver seus problemas.
                             </p>
                         </div>
                         
@@ -246,17 +253,14 @@
                 </p>
             </button>
         </div>
-        <div style="
-            width: 500px;
-            height: 100px;
-        " class="photo-2">
-            image
+        <div class="photo-2">
+            <img src="./assets/logo.png" alt="">
         </div>
     </section>
     
     <section class="faq" id="faq">
         <h2>Veja algumas dúvidas de nossos clientes</h2>
-        <div class="faq-container">
+        <div class="faq-container" data-aos="fade-up">
             <input type="checkbox" id="q1" name="q1" />
             <div class="question-container">
                 <label class="question" for="q1">
@@ -265,7 +269,10 @@
                         sei lá, 1 2 3!
                     </p>
                 </label>
-                <i class="fa-solid fa-angle-right arrow "></i>
+                <label for="q1">
+                    <i class="fa-solid fa-angle-right arrow "></i>
+                </label>
+                
             </div>
             <div class="answer" aria-expanded="false" id="a1">
                 <p>
@@ -275,7 +282,7 @@
             </div>
         </div>
 
-        <div class="faq-container">
+        <div class="faq-container" data-aos="fade-up">
             <input type="checkbox" id="q2" name="q2" />
             <div class="question-container">
                 <label class="question" for="q2">
@@ -284,7 +291,9 @@
                         sei lá, 1 2 3!
                     </p>
                 </label>
-                <i class="fa-solid fa-angle-right arrow "></i>
+                <label for="q2">
+                    <i class="fa-solid fa-angle-right arrow "></i>
+                </label>
             </div>
             <div class="answer" aria-expanded="false" id="a1">
                 <p>
@@ -314,7 +323,7 @@
                 </a>
             </div>
             <div class="footer-content">
-                <img src="./assets/logo.webp" alt="Logo da Amorim Advocacia & Assessoria Jurídica">
+                <img src="./assets/logo_big.svg" alt="Logo da Amorim Advocacia & Assessoria Jurídica">
                 <button class="footer-contact">
                     <a href="#">
                         Entrar em contato
@@ -353,6 +362,17 @@
             Copyright&COPY; 2023 | Amorim Advocacia - Todos direitos reservados
         </p>
     </footer>
+    
+    <a
+        href="https://api.whatssapp.com/send?phone=551100000000&text=Quero%20fazer%20um%20agendamento%20hoje!"
+        class="btn-whatsapp"
+        target="_blank"
+        data-aos="zoom-in-up"
+    >
+        <img src="./assets/whatssapp.svg" alt="Botão whatssapp">
+        <span class="tooltip-text">Sua saúde não pode mais esperar. Agende agora</span>
+    </a>
+        
     
     
     <script src="index.js">

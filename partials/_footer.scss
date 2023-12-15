@@ -79,6 +79,9 @@
             text-wrap: wrap;
         }
         .footer-main{
+            img{
+                margin-bottom:20px;
+            }
             flex-direction: column-reverse;
             gap:30px;
             .footer-content {
