@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    margin: 30px 0;
+    margin: 30px 20px;
     gap: 15px;
     overflow: hidden;
     button{
@@ -18,12 +18,16 @@
         color: $secondary-dark;
         border: 1px solid $secondary-dark;
         border-radius: 4px;
+        transition: .3s
     }
     button:hover{
         animation: zoom-text .8s infinite alternate;
+        color:$white-normal;
+        background:$secondary-normal;
     }
     h2{
-        font-family:'Raleway'
+        font-family:'Raleway';
+        text-align:center;
     }
     .faq-container{
         width: 100%;
@@ -35,6 +39,7 @@
         min-height: 80px;
         .question-container{
             width: 100%;
+            gap:10px;
             padding: 0 20px;
             display:flex;
             justify-content: space-between;
@@ -52,18 +57,19 @@
                 gap:40px;
                 
                 p{
-                    font-size: 2em;
+                    font-size: 1.3em;
                     user-select: none;
                     font-family:'Raleway';
                 }
-                i{
-                    color:$secondary-normal;
-                    font-size: 1.5em;
-                    
-                }
-                .interrogation{
-                    font-size: 2.5em;
-                }
+            }
+            i{
+                color:$secondary-normal;
+                font-size: 1.5em;
+                
+            }
+            .interrogation{
+                color:$secondary-normal;
+                font-size: 2.5em;
             }
             .arrow{
                 color:$secondary-normal;
@@ -75,6 +81,8 @@
         .answer{
             display: flex;
             pointer-events: none;
+            flex-direction:column;
+            text-align:justify;
             p{
                 font-family:'PT Serif', serif;
             }
@@ -90,6 +98,7 @@
             min-height: 50px;
             transition: height 0.2s, opacity 0.1s;
             height: 100%;
+            transition: height 0.3s, opacity 0.2s, margin-top .5s;
             }
             ~ .question-container .arrow{
                 transform: rotate(-90deg)
@@ -105,12 +114,10 @@
         
     }
     .faq-container:hover{
-        .question{
             .interrogation{
                 
                 animation: zoom 0.8s infinite alternate;
             }
-        }
     }
 }
 

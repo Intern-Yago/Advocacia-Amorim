@@ -6,7 +6,7 @@
     h2{
         text-align: center;
         padding: 10px;
-        font-family:'Raleway'
+        font-family: 'stix two text';
     }
     h3{
         color: $primary-light;
@@ -21,17 +21,64 @@
     }
     width: 100%;
     min-width:370px;
-    background: url(../assets/bg-dots.webp) repeat,linear-gradient(180deg,rgba(255, 255, 255, 0.897) 0%,#FFFFFF 5%);
+    // background: url(../assets/bg-dots.webp) repeat,linear-gradient(180deg,rgba(255, 255, 255, 0.897) 0%,#FFFFFF 5%);
 }
 
-.services-content{
+.services-ocultos-container{
+    width:100%;
+    margin-top:15px;
+    span{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+    }
+    input{
+        display:none;
+    }
+    input:checked ~ .services-ocultos{
+        margin-top:15px;
+        opacity: 1;
+        min-height: 50px;
+        transition: height 0.2s, opacity 0.1s;
+        height: 100%;
+        padding: 50px;
+        transition: height 0.3s, opacity 0.2s, margin-top 0.5s, padding .5s;
+        border-bottom: 5px solid #c29843;
+    }
+    label{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        cursor:pointer;
+        width: 100%;
+        border-bottom: 5px solid $secondary-dark;
+        margin-bottom: -15px;
+        border-radius:5px;
+        p{
+            font-size:1.2em;
+            color:$secondary-dark;
+            animation: zoom-services-text 0.8s infinite alternate;
+        }
+    }
+    i{
+        color:$secondary-dark;
+        font-size: 2em;
+    }
+}
+
+.services-content, .services-ocultos{
+    padding-bottom: 0;
     display:flex;
     align-items:center;
     justify-content: center;
     flex-direction:row;
     flex-wrap: wrap;
     padding: 50px;
+    padding-bottom: 0;
     gap: 40px;
+    background: url(../assets/bg-dots.webp) repeat,linear-gradient(180deg,rgba(255, 255, 255, 0.897) 0%,#FFFFFF 5%);
 }
 
 .service{
@@ -70,6 +117,14 @@
     gap: 15px;
 }
 
+.services-ocultos{
+    margin-top: 0;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s, opacity 0.2s, margin-top 0.5s, padding .5s;
+    padding:0;
+}
+
 @media screen and (max-width: 768px){
     
     .services{
@@ -105,4 +160,15 @@
     outline: 1px solid #f5b230;
     box-shadow: 0 3px 16px -4px #d0a145;
     color: $black-dark;
+}
+
+@keyframes zoom-services-text{
+    from{
+        scale:(1);
+        font-weight: 500;
+    }
+    to{
+        scale:(1.1);
+        font-weight: 500;
+    }
 }

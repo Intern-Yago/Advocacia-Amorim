@@ -33,16 +33,24 @@ header{
     visibility:hidden;
 }
 .header-button, .header-button-visible{
-    border: 1px solid $white-normal;
-    padding: 20px 50px;
-    border-radius: 4px;
+    text-align: center;
+    i{
+        font-size: 1.5em;
+    }
+    display:flex;
+    gap:10px;
+    align-items:center;
+    padding: 20px 40px;
+    border-radius: 20px;
     color:$white-normal;
-    background-color: transparent;
+    background: -moz-linear-gradient(90deg, rgba(20,117,17,1) 29%, rgba(0,10,62,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(20,117,17,1) 29%, rgba(0,10,62,1) 100%);
+    background: linear-gradient(90deg, rgba(20,117,17,1) 29%, rgba(0,10,62,1) 100%);
     transition: background-color .8s;
 }
 
 .header-button:hover, .header-button-visible:hover{
-    border: 1px solid $secondary-light;
+    outline: 1px solid $swhite=normal;
     background-color: $secondary-light;
 }
 

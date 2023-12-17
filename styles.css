@@ -32,16 +32,22 @@ header {
 }
 
 .header-button, .header-button-visible {
-  border: 1px solid #fefbff;
-  padding: 20px 50px;
-  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 20px 40px;
+  border-radius: 20px;
   color: #fefbff;
-  background-color: transparent;
+  background: linear-gradient(90deg, rgb(20, 117, 17) 29%, rgb(0, 10, 62) 100%);
   transition: background-color 0.8s;
+}
+.header-button i, .header-button-visible i {
+  font-size: 1.5em;
 }
 
 .header-button:hover, .header-button-visible:hover {
-  border: 1px solid #e7be6b;
+  outline: 1px solid #e7be6b;
   background-color: #e7be6b;
 }
 
@@ -122,10 +128,12 @@ header {
   text-align: center;
   font-size: 50px;
   color: #cca352;
-  font-family: "Raleway";
+  font-family: "stix two text";
 }
 .hero h2 {
   text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 .hero p {
   text-align: center;
@@ -218,12 +226,11 @@ header {
   padding-top: 40px;
   width: 100%;
   min-width: 370px;
-  background: url(../assets/bg-dots.webp) repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.897) 0%, #FFFFFF 5%);
 }
 .services h2 {
   text-align: center;
   padding: 10px;
-  font-family: "Raleway";
+  font-family: "stix two text";
 }
 .services h3 {
   color: #1e294d;
@@ -236,14 +243,61 @@ header {
   text-align: center;
 }
 
-.services-content {
+.services-ocultos-container {
+  width: 100%;
+  margin-top: 15px;
+}
+.services-ocultos-container span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.services-ocultos-container input {
+  display: none;
+}
+.services-ocultos-container input:checked ~ .services-ocultos {
+  margin-top: 15px;
+  opacity: 1;
+  min-height: 50px;
+  transition: height 0.2s, opacity 0.1s;
+  height: 100%;
+  padding: 50px;
+  transition: height 0.3s, opacity 0.2s, margin-top 0.5s, padding 0.5s;
+  border-bottom: 5px solid #c29843;
+}
+.services-ocultos-container label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 5px solid #c29843;
+  margin-bottom: -15px;
+  border-radius: 5px;
+}
+.services-ocultos-container label p {
+  font-size: 1.2em;
+  color: #c29843;
+  animation: zoom-services-text 0.8s infinite alternate;
+}
+.services-ocultos-container i {
+  color: #c29843;
+  font-size: 2em;
+}
+
+.services-content, .services-ocultos {
+  padding-bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 50px;
+  padding-bottom: 0;
   gap: 40px;
+  background: url(../assets/bg-dots.webp) repeat, linear-gradient(180deg, rgba(255, 255, 255, 0.897) 0%, #FFFFFF 5%);
 }
 
 .service {
@@ -283,6 +337,14 @@ header {
   gap: 15px;
 }
 
+.services-ocultos {
+  margin-top: 0;
+  height: 0;
+  opacity: 0;
+  transition: height 0.3s, opacity 0.2s, margin-top 0.5s, padding 0.5s;
+  padding: 0;
+}
+
 @media screen and (max-width: 768px) {
   .services {
     flex-direction: column;
@@ -313,6 +375,16 @@ header {
   color: #161617;
 }
 
+@keyframes zoom-services-text {
+  from {
+    scale: 1;
+    font-weight: 500;
+  }
+  to {
+    scale: 1.1;
+    font-weight: 500;
+  }
+}
 .about {
   border-radius: 5px;
   display: flex;
@@ -321,13 +393,14 @@ header {
   align-items: center;
 }
 .about h2 {
-  font-family: "Raleway";
+  font-family: "stix two text";
 }
 .about p {
   font-size: 16px;
   line-height: 28px;
   font-family: "PT Serif", serif;
   font-weight: 500;
+  text-align: justify;
 }
 .about div {
   flex: 1;
@@ -372,12 +445,27 @@ header {
     padding: 60px 0px;
   }
 }
+.diferencial::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: linear-gradient(to bottom, rgba(9, 16, 39, 0.767), #06121e), url(../assets/bg-dots.webp);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: contain;
+  overflow: hidden;
+}
+
 .diferencial {
-  background-color: #101a38;
   color: #fff;
   border-radius: 5px;
   display: flex;
   width: 95%;
+  flex-direction: column;
+  position: relative;
 }
 .diferencial div {
   display: flex;
@@ -385,17 +473,53 @@ header {
   align-items: center;
   justify-content: center;
 }
+.diferencial .diferencial-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 70px;
+  gap: 100px;
+}
+.diferencial .diferencial-header span {
+  width: 50%;
+}
+.diferencial .diferencial-header h2 {
+  font-weight: 500;
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  line-height: 45px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "stix two text";
+}
+.diferencial .diferencial-header p {
+  text-align: justify;
+  width: 50%;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.diferencial a {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 100%;
+}
 .diferencial .contact {
   display: flex;
   align-items: center;
-  justify-content: left;
-  padding: 0 12%;
+  justify-content: center;
+  padding: 0 25%;
   border: 0;
-  border-radius: 0;
-  min-width: 95%;
-  max-height: 50px;
+  border-radius: 10px;
+  min-width: 100%;
   min-height: 25px;
   transition: background-color 0.3s;
+  text-decoration: none;
+  color: #06121e;
 }
 .diferencial .contact img {
   opacity: 0;
@@ -420,25 +544,40 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 70px 50px;
+  padding: 0px 70px 40px 70px;
+  min-width: 760px;
   gap: 60px;
-  flex-wrap: wrap;
 }
 .diferencial-content .text {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.diferencial-content .text span:hover {
+  background: #fefbff;
+  outline: 1px solid #f5b230;
+  box-shadow: 0 3px 16px -4px #d0a145;
+}
+.diferencial-content .text span:hover .text-content p {
+  color: #101a38;
 }
 .diferencial-content .text span {
+  background: #101138;
+  border: 1px solid #cca352;
+  padding: 30px;
+  flex: 1;
   gap: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 170px;
+  transition: background 0.3s;
 }
 .diferencial-content .text span .text-header {
   width: 100%;
@@ -461,8 +600,9 @@ header {
 }
 .diferencial-content .text span .text-content p {
   font-size: 17px;
-  line-height: 15px;
+  line-height: 1.2em;
   font-family: "Times New Roman", Times, serif;
+  text-align: justify;
 }
 
 .text-container {
@@ -475,18 +615,42 @@ header {
   gap: 25px;
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 1050px) {
   .diferencial div.photo-2 {
     display: none;
   }
+}
+@media screen and (max-width: 800px) {
+  .diferencial-content {
+    min-width: 0px;
+  }
+  .diferencial .diferencial-header {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    text-align: center;
+  }
+  .diferencial-content .text {
+    gap: 41px;
+    flex-direction: column;
+  }
+  .diferencial .diferencial-header p {
+    width: 100%;
+  }
+  .diferencial .diferencial-header span {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 790px) {
   .text-container {
-    gap: 27px;
+    gap: 41px;
   }
   .diferencial h2 {
     text-align: center;
   }
   .diferencial .contact {
-    max-width: 75px;
+    max-width: 100%;
+    padding: 0 10%;
     background-color: #c29843;
   }
   .diferencial .contact img {
@@ -494,7 +658,7 @@ header {
     width: 55px;
   }
   .diferencial .contact p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 15px;
     font-weight: bold;
     color: #fff;
@@ -503,6 +667,9 @@ header {
 @media screen and (max-width: 500px) {
   .diferencial-content .text {
     flex-wrap: wrap;
+  }
+  .diferencial-content {
+    padding: 0 50px 40px 50px;
   }
 }
 .footer {
@@ -516,23 +683,24 @@ header {
 .footer p {
   color: #fff;
 }
+.footer i {
+  color: #e7be6b;
+}
 .footer .footer-main {
   padding: 20px;
   padding-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row-reverse;
   gap: 70px;
-  width: 50%;
-}
-.footer .footer-main a:hover p {
-  -webkit-text-decoration: underline 1px solid #fff;
-          text-decoration: underline 1px solid #fff;
+  width: 100%;
 }
 .footer .footer-main .footer-icons {
   flex: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   gap: 20px;
 }
 .footer .footer-main .footer-icons a {
@@ -540,8 +708,23 @@ header {
   align-items: center;
   gap: 10px;
 }
-.footer .footer-main .footer-icons a i {
-  color: #e7be6b;
+.footer .footer-main .footer-num {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.footer .footer-main .footer-num span {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.footer .footer-main .footer-num .num-text {
+  font-size: 14px;
+}
+.footer .footer-main .footer-num .num-number {
+  font-size: 22px;
+  font-weight: 700;
 }
 .footer .footer-main .footer-content {
   flex: 1;
@@ -561,7 +744,7 @@ header {
   height: 100%;
 }
 .footer .footer-main .footer-content img {
-  max-width: 160px;
+  max-width: 260px;
 }
 .footer .footer-main .footer-content nav {
   display: flex;
@@ -577,6 +760,12 @@ header {
   color: #fff;
 }
 
+@media (max-width: 980px) {
+  .footer .footer-main .footer-content img {
+    margin: 0 auto;
+    width: 150px;
+  }
+}
 @media screen and (max-width: 850px) {
   .footer p {
     text-align: center;
@@ -648,7 +837,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 0 20px;
-  margin: 30px 0;
+  margin: 30px 20px;
   gap: 15px;
   overflow: hidden;
 }
@@ -663,12 +852,16 @@ header {
   color: #c29843;
   border: 1px solid #c29843;
   border-radius: 4px;
+  transition: 0.3s;
 }
 .faq button:hover {
   animation: zoom-text 0.8s infinite alternate;
+  color: #fefbff;
+  background: #cca352;
 }
 .faq h2 {
   font-family: "Raleway";
+  text-align: center;
 }
 .faq .faq-container {
   width: 100%;
@@ -681,6 +874,7 @@ header {
 }
 .faq .faq-container .question-container {
   width: 100%;
+  gap: 10px;
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
@@ -699,17 +893,18 @@ header {
   gap: 40px;
 }
 .faq .faq-container .question-container .question p {
-  font-size: 2em;
+  font-size: 1.3em;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
   font-family: "Raleway";
 }
-.faq .faq-container .question-container .question i {
+.faq .faq-container .question-container i {
   color: #cca352;
   font-size: 1.5em;
 }
-.faq .faq-container .question-container .question .interrogation {
+.faq .faq-container .question-container .interrogation {
+  color: #cca352;
   font-size: 2.5em;
 }
 .faq .faq-container .question-container .arrow {
@@ -721,6 +916,8 @@ header {
 .faq .faq-container .answer {
   display: flex;
   pointer-events: none;
+  flex-direction: column;
+  text-align: justify;
 }
 .faq .faq-container .answer p {
   font-family: "PT Serif", serif;
@@ -734,6 +931,7 @@ header {
   min-height: 50px;
   transition: height 0.2s, opacity 0.1s;
   height: 100%;
+  transition: height 0.3s, opacity 0.2s, margin-top 0.5s;
 }
 .faq .faq-container input:checked ~ .question-container .arrow {
   transform: rotate(-90deg);
@@ -744,7 +942,7 @@ header {
   opacity: 0;
   transition: height 0.3s, opacity 0.2s, margin-top 0.5s;
 }
-.faq .faq-container:hover .question .interrogation {
+.faq .faq-container:hover .interrogation {
   animation: zoom 0.8s infinite alternate;
 }
 
