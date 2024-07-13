@@ -47,7 +47,7 @@ header {
 }
 
 .header-button:hover, .header-button-visible:hover {
-  outline: 1px solid #e7be6b;
+  outline: 1px solid #fefbff;
   background-color: #e7be6b;
 }
 
@@ -415,6 +415,10 @@ header {
 }
 .about .photo-2 img {
   border-radius: 600px;
+  shape-outside: circle();
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  filter: contrast(1.1) saturate(1.5);
 }
 
 .about-content {
