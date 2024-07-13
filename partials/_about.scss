@@ -26,6 +26,9 @@
         border-radius: 600px;
         img{
             border-radius: 600px;
+            shape-outside: circle();
+            clip-path: circle();
+            filter: contrast(1.1) saturate(1.5);
         }
     }
     
