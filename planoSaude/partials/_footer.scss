@@ -1,0 +1,118 @@
+.footer{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    background-color: $primary-normal;
+    width: 100%;
+    padding-bottom: 20px;
+    p{
+        color: $white-light;
+    }
+    i{
+        color:$secondary-light;
+    }
+    .footer-main{
+        padding: 20px;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction:row-reverse;
+        gap: 70px;
+        width: 100%;
+        .footer-icons{
+            flex: 1;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            a{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                
+            }
+            
+        }
+        .footer-num{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            gap:15px;
+            span{
+                display: flex;
+                gap: 5px;
+                flex-direction: column;
+            }
+            .num-text{
+                font-size:14px;
+            }
+            .num-number{
+                font-size:22px;
+                font-weight: 700;
+            }
+        }
+        .footer-content{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            button{
+                width:80%;
+                height: 35px;
+                border: none;
+                border-radius: 5px;
+                a{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            img{
+                max-width: 260px;
+            }
+            nav{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                max-width: 200px;
+                gap: 10px;
+                a{
+                    flex:1;
+                    text-align:center;
+                    color: $white-light;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 980px){
+    .footer .footer-main .footer-content img{
+        margin: 0 auto;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .footer{
+        p{
+            text-align: center;
+            text-wrap: wrap;
+        }
+        .footer-main{
+            img{
+                margin-bottom:20px;
+            }
+            flex-direction: column-reverse;
+            gap:30px;
+            .footer-content {
+                gap: 0;
+                nav{
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+
+.btn-whatsapp{
+    position: fixed;
+    bottom: 14px;
+    right: 24px;
+    z-index: 99;
+
+    img{
+        max-width: 74px;
+        transition: transform .4s;
+    }
+
+    img:hover{
+        transform: scale(1.1);
+    }
+}
+
+.btn-whatsapp .tooltip-text{
+    visibility: visible;
+    position: absolute;
+    width: 165px;
+    left: -180px;
+    padding: 6px;
+    border-radius: 10px 10px 0 10px;
+    text-align: center;
+    background-color: $white-normal;
+    color:$primary-dark;
+    border:3px solid $secondary-light;
+    opacity: 1;
+    animation:nudge 3s linear infinite;
+}
+
+
+
+
+@keyframes nudge{
+    80% {
+        transform: translate(0,0) rotate(0deg);
+    }
+    85% {
+        transform: translate(-2px,2px) rotate(-2deg);
+    }
+    90% {
+        transform: translate(0,0) rotate(0deg);
+    }
+    95% {
+        transform: translate(2px,2px) rotate(2deg);
+    }
+    100% {
+        transform: translate(0,0) rotate(0deg);
+    }
+}

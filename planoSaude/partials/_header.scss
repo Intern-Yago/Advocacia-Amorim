@@ -1,0 +1,96 @@
+.bg-home{
+    width: 100%;
+}
+header{
+    width: 100%;
+    padding-top: 20px;
+    
+}
+
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-icons{
+    i{
+        color: $white-normal;
+    }
+}
+
+.header-icons{
+    display: flex;
+    gap:14px;
+}
+
+.header-icons a:hover{
+    i{
+        animation: translateY 0.8s infinite alternate;
+        color:$secondary-light;
+    }
+}
+.header-button{
+    visibility:hidden;
+}
+.header-button, .header-button-visible{
+    text-align: center;
+    i{
+        font-size: 1.5em;
+    }
+    display:flex;
+    gap:10px;
+    align-items:center;
+    padding: 20px 40px;
+    border-radius: 20px;
+    color:$white-normal;
+    background: -moz-linear-gradient(90deg, rgba(20,117,17,1) 29%, rgba(0,10,62,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(20,117,17,1) 29%, rgba(0,10,62,1) 100%);
+    background: linear-gradient(90deg, rgba(20,117,17,1) 29%, rgba(0,10,62,1) 100%);
+    transition: background-color .8s;
+}
+
+.header-button:hover, .header-button-visible:hover{
+    outline: 1px solid $white-normal;
+    background-color: $secondary-light;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        i{
+            margin-top: 16px;
+            font-size: 34px;
+        }
+    }
+    .header-logo {
+        margin:0;
+        img{
+            width: 300px;
+            margin-top: 46px;
+        }
+    }
+
+    .hero{
+        min-height: 70vh;
+    }
+
+}
+@keyframes translateY{
+    from{
+        transform:translateY(0) scale(1);
+    }
+    to{
+        transform:translateY(-8px) scale(1.1);
+    }
+}
+// assessoria.amorim.adv
