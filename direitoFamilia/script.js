@@ -1,4 +1,4 @@
-// AOS.init()
+AOS.init()
 
 document.querySelectorAll(".button-accordion").forEach((btn)=>{
     btn.addEventListener("click", ()=>{
