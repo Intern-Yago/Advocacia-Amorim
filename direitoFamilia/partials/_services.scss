@@ -1,20 +1,44 @@
+.service.open .service-info{
+    height: 110px;
+    padding: 0 14px 14px 14px;
+}
+
 .services{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 40px;
+    button:hover{
+        cursor: pointer;
+        transform:scale(1.03);
+        color: #d0a145;
+    }
     h2{
         text-align: center;
         padding: 10px;
         font-family: 'stix two text';
     }
-    h3{
+    button, h3{
         color: $primary-light;
         text-align: center;
         font-family:'Raleway'
         
     }
-    p{
+    button{
+        border: none;
+        font-size: 1.17em;
+        font-weight: bold;
+        background-color: #fff;
+        height: 40px;
+        transition: transform 0.5s ease;
+    }
+    button ~ .service-info{
+        padding: 0 14px;
+    }
+
+
+    
+    .content-accordion, p{
         font-family:'PT Serif', serif;
         font-weight: 500;
         text-align:center;
@@ -101,13 +125,11 @@
     z-index:1;
 }
 
-.service:hover{
-    transform:scale(1.1);
-    z-index: 1;
-}
-
 .service-info{
+    height: 0;
+    overflow: hidden;
     width: 100%;
+    transition: height .5s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -123,12 +145,17 @@
     opacity: 0;
     transition: height 0.3s, opacity 0.2s, margin-top 0.5s, padding .5s;
     padding:0;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 768px){
     
     .services{
         flex-direction: column;
+    }
+    .service.open .service-info{
+        height: 90px;
+        padding: 0 14px 14px 14px;
     }
 
     .service img{
@@ -155,11 +182,6 @@
     .services-content{
         padding-bottom: 0;
     }
-}
-.service:hover{
-    outline: 1px solid #f5b230;
-    box-shadow: 0 3px 16px -4px #d0a145;
-    color: $black-dark;
 }
 
 @keyframes zoom-services-text{

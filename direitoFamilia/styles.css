@@ -103,7 +103,7 @@ header {
   content: "";
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(18, 30, 74, 0.651), #06121e), url("./assets/bg.png");
+  background-image: linear-gradient(to bottom, rgba(18, 30, 74, 0.651), #06121e), url("../assets/bg.webp");
   left: 0;
   top: 0;
   width: 100%;
@@ -219,6 +219,11 @@ header {
     max-height: 100%;
   }
 }
+.service.open .service-info {
+  height: 110px;
+  padding: 0 14px 14px 14px;
+}
+
 .services {
   display: flex;
   flex-direction: column;
@@ -227,17 +232,33 @@ header {
   width: 100%;
   min-width: 370px;
 }
+.services button:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  color: #d0a145;
+}
 .services h2 {
   text-align: center;
   padding: 10px;
   font-family: "stix two text";
 }
-.services h3 {
+.services button, .services h3 {
   color: #1e294d;
   text-align: center;
   font-family: "Raleway";
 }
-.services p {
+.services button {
+  border: none;
+  font-size: 1.17em;
+  font-weight: bold;
+  background-color: #fff;
+  height: 40px;
+  transition: transform 0.5s ease;
+}
+.services button ~ .service-info {
+  padding: 0 14px;
+}
+.services .content-accordion, .services p {
   font-family: "PT Serif", serif;
   font-weight: 500;
   text-align: center;
@@ -321,13 +342,11 @@ header {
   transition: transform 0.2s;
 }
 
-.service:hover {
-  transform: scale(1.1);
-  z-index: 1;
-}
-
 .service-info {
+  height: 0;
+  overflow: hidden;
   width: 100%;
+  transition: height 0.5s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -343,11 +362,16 @@ header {
   opacity: 0;
   transition: height 0.3s, opacity 0.2s, margin-top 0.5s, padding 0.5s;
   padding: 0;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {
   .services {
     flex-direction: column;
+  }
+  .service.open .service-info {
+    height: 90px;
+    padding: 0 14px 14px 14px;
   }
   .service img {
     max-width: 740px;
@@ -369,12 +393,6 @@ header {
     padding-bottom: 0;
   }
 }
-.service:hover {
-  outline: 1px solid #f5b230;
-  box-shadow: 0 3px 16px -4px #d0a145;
-  color: #161617;
-}
-
 @keyframes zoom-services-text {
   from {
     scale: 1;
