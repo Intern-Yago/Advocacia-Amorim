@@ -257,6 +257,7 @@ header {
 }
 .services button ~ .service-info {
   padding: 0 14px;
+  text-align: center;
 }
 .services .content-accordion, .services p {
   font-family: "PT Serif", serif;
@@ -366,6 +367,9 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .service-info {
+    text-align: start;
+  }
   .services {
     flex-direction: column;
   }

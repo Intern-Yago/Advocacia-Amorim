@@ -34,6 +34,7 @@
     }
     button ~ .service-info{
         padding: 0 14px;
+        text-align: center;
     }
 
 
@@ -149,7 +150,9 @@
 }
 
 @media screen and (max-width: 768px){
-    
+    .service-info{
+        text-align: start;
+    }
     .services{
         flex-direction: column;
     }
